@@ -1,0 +1,79 @@
+{
+	"name": "Copy Protect",
+	"description": "This plugin lets site owners easily add Umami Analytics code to their sites.",
+	"license": "GPL-3.0",
+	"author": "freaks-dev",
+	"version": "1.0.0",
+	"scope": "site",
+	"minimumPubliiVersion": "0.39.0",
+	"usePluginSettingsView": false,
+    "messageInOptions": {
+        "type": "info",
+        "text": "Please remember that this plugin does not output the code in preview mode by default. You can change this behavior using the 'Output code in Preview Mode' option."
+    },
+    "config": [
+        {
+            "name": "disableCopy",
+            "label": "Enable Copy Protection",
+            "note": "Do you want to enable copy protection on this website.",
+            "group": "Copy Protection",
+            "type": "radio",
+            "value": "copy",
+            "options": [
+                {
+                    "label": "yes",
+                    "value": "copy"
+                },
+                {
+                    "label": "no",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "name": "randomText",
+            "label": "Random Text",
+            "note": "Requires Copy Protection setting above to be set to 'yes'. Provide the random text that gets copied everytime someone tries to copy content.",
+            "group": "Copy Protection",
+            "placeholder": "Please do not copy.",
+            "value": "",
+            "type": "text"
+        },
+        {
+            "name": "disableRightClick",
+            "label": "Disable Right Click",
+            "note": "Do you want to disable right click on this website.",
+            "group": "Right Click",
+            "placeholder": "contextmenu",
+            "type": "radio",
+            "value": "contextmenu",
+            "options": [
+                {
+                    "label": "yes",
+                    "value": "contextmenu"
+                },
+                {
+                    "label": "no",
+                    "value": ""
+                }
+            ]
+        },
+        {
+            "name": "disableRightClickText",
+            "label": "Alert Text on Right click",
+            "note": "Alert message that shows up when right click on website.",
+            "group": "Right Click",
+            "placeholder": "Right-clicking is not allowed on this website.",
+            "value": "Right-clicking is not allowed on this website.",
+            "type": "text"
+        },
+        {
+            "name": "previewMode",
+            "label": "Output code in Preview Mode",
+            "note": "Enable this option only when checking or debugging code generation. Leaving this option enabled can lead to issues when debugging like, unable to right click and copy content.",
+            "group": "Preview",
+            "type": "checkbox",
+            "value": false
+        }
+    ]
+}
